@@ -4,34 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/calculateBMIButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="BMI calculator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
-
-    <Button
-        android:id="@+id/calculateCalories"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calories calculator"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.568" />
-
-    <Button
-        android:id="@+id/recipies"
+    <TextView
+        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Recipies"
@@ -40,30 +16,53 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.701" />
+        app:layout_constraintVertical_bias="0.075" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/recipieTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Health app"
+        android:text="TextView"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.147" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="162dp"
-        android:layout_height="155dp"
+    <TextView
+        android:id="@+id/recipiePlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.173"
-        app:srcCompat="@drawable/health" />
+        app:layout_constraintVertical_bias="0.238" />
+
+    <Button
+        android:id="@+id/recipiesReturnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return to main page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.713" />
+
+    <Button
+        android:id="@+id/nextRecipie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next recipie"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.484" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

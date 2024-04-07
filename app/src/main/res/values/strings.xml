@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string-array name="recipies">
+        <item>Jajecznica|Podgrzej masło na patelni. Nastepnię wbij 3 jajka. Mieszaj aż sie zetną. Posyp szczypiorkiem. Gotowe.</item>
+        <item>Kanapki ze wszystkim|Posmaruj chleb majonezem. Połóż na niego plaster sera i szynki. Posyp przyprawą włoską. Jedź z pomidorkami koktajlowymi.</item>
+    </string-array>
 </resources>

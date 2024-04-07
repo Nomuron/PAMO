@@ -1,11 +1,10 @@
 //Author: Patryk Klimek
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +14,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText heightTextView;
-    private EditText weightTextView;
-    private Button calculate_button;
-    private TextView result;
+    Button BMIButton;
+    Button CaloriesButton;
+    Button RecipiesButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,24 +24,31 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        heightTextView = (EditText) findViewById(R.id.heightText);
-        weightTextView = (EditText) findViewById(R.id.weightText);
-        calculate_button = findViewById(R.id.calculateBMIButton);
-        result = (TextView) findViewById(R.id.resultBMI);
+        BMIButton = findViewById(R.id.calculateBMIButton);
+        CaloriesButton = findViewById(R.id.calculateCalories);
+        RecipiesButton = findViewById(R.id.recipies);
 
-        calculate_button.setOnClickListener(new View.OnClickListener() {
+        BMIButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                float height = Float.parseFloat(heightTextView.getText().toString());
-                float weight = Float.parseFloat(weightTextView.getText().toString());
+                Intent bmiIntent = new Intent(MainActivity.this, BMI.class);
+                startActivity(bmiIntent);
+            }
+        });
 
-                System.out.println(height);
-                System.out.println(weight);
+        CaloriesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent bmrIntent = new Intent(MainActivity.this, BMR.class);
+                startActivity(bmrIntent);
+            }
+        });
 
-                Float BMI = weight / (height * height);
-
-                result.setText(String.valueOf(BMI));
-
+        RecipiesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recipiesIntent = new Intent(MainActivity.this, Recipies.class);
+                startActivity(recipiesIntent);
             }
         });
 

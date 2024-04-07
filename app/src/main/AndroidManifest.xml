@@ -21,6 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".BMI"></activity>
+        <activity android:name=".BMR"></activity>
+        <activity android:name=".Recipies"></activity>
     </application>
 
 </manifest>
