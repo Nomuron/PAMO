@@ -40,7 +40,7 @@ public class BMI extends AppCompatActivity {
                 float height = (Float.parseFloat(heightTextView.getText().toString()) / 100);
                 float weight = Float.parseFloat(weightTextView.getText().toString());
 
-                Float BMI = weight / (height * height);
+                Float BMI = countBMI(weight, height);
 
                 result.setText(String.valueOf(BMI));
             }
@@ -59,5 +59,9 @@ public class BMI extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+
+    public static float countBMI(float weight, float height) {
+        return weight / (height * height);
     }
 }
