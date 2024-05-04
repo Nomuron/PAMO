@@ -17,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     Button BMIButton;
     Button CaloriesButton;
     Button RecipiesButton;
+    Button ShoppingList;
+    Button BMIChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         BMIButton = findViewById(R.id.calculateBMIButton);
         CaloriesButton = findViewById(R.id.calculateCalories);
         RecipiesButton = findViewById(R.id.recipies);
+        ShoppingList = findViewById(R.id.shoppingList);
+        BMIChart = findViewById(R.id.BMIChart);
 
         BMIButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +52,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent recipiesIntent = new Intent(MainActivity.this, Recipies.class);
+                startActivity(recipiesIntent);
+            }
+        });
+
+        ShoppingList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recipiesIntent = new Intent(MainActivity.this, ShoppingList.class);
+                startActivity(recipiesIntent);
+            }
+        });
+
+        BMIChart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recipiesIntent = new Intent(MainActivity.this, BMIChart.class);
                 startActivity(recipiesIntent);
             }
         });
